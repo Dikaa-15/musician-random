@@ -3,346 +3,464 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zesss | Modern & Futuristic Solutions</title>
+    <title>Classical Musician | Elegant Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#6366f1',
-                        secondary: '#8b5cf6',
-                        dark: '#1f2937',
-                        light: '#f9fafb'
+                        primary: '#8B4513',
+                        secondary: '#D4AF37',
+                        dark: '#2C1810',
+                        light: '#F8F0E3',
+                        accent: '#8B0000'
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif']
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Crimson Text', 'serif']
                     }
                 }
             }
         }
     </script>
     <style>
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        body {
+            background-color: #F8F0E3;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
         
-        .gradient-bg {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        .vintage-border {
+            border: 8px solid #8B4513;
+            border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='100' height='100' fill='none' stroke='%238B4513' stroke-width='8' stroke-dasharray='10,6'/%3E%3C/svg%3E") 8 round;
         }
         
-        .card-hover {
-            transition: all 0.3s ease;
+        .ornamental-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #8B4513;
+            margin: 2rem 0;
         }
         
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        .ornamental-divider::before,
+        .ornamental-divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #8B4513;
         }
         
-        .typewriter h1 {
+        .ornamental-divider::before {
+            margin-right: 1rem;
+        }
+        
+        .ornamental-divider::after {
+            margin-left: 1rem;
+        }
+        
+        .music-note {
+            display: inline-block;
+            margin: 0 0.5rem;
+            color: #D4AF37;
+        }
+        
+        .parchment {
+            background-color: #F8F0E3;
+            background-image: linear-gradient(rgba(244, 240, 225, 0.7) 0.1em, transparent 0.1em), linear-gradient(90deg, rgba(244, 240, 225, 0.7) 0.1em, transparent 0.1em);
+            background-size: 3em 3em;
+            box-shadow: 0 0 10px rgba(139, 69, 19, 0.2);
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .parchment::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(139, 69, 19, 0.1) 0%, transparent 75%);
+            pointer-events: none;
+        }
+        
+        .gold-emboss {
+            color: #D4AF37;
+            text-shadow: 1px 1px 0px #8B4513, 
+                         -1px -1px 0px #8B4513, 
+                         2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .record {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #2C1810 10%, #000 60%);
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: rotate 20s linear infinite;
+            transition: animation-play-state 0.3s ease;
+        }
+        
+        .record:hover {
+            animation-play-state: paused;
+        }
+        
+        .record::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #D4AF37;
+            box-shadow: 0 0 10px #D4AF37;
+            z-index: 2;
+        }
+        
+        .record::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #F8F0E3;
+            z-index: 3;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .music-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #8B4513, #D4AF37, #8B4513);
+            margin: 10px 0;
+            position: relative;
             overflow: hidden;
-            border-right: .15em solid #6366f1;
-            white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: .1em;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
         }
         
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
+        .music-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            animation: shine 2s infinite;
         }
         
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #6366f1 }
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
         }
     </style>
 </head>
-<body class="font-sans bg-gray-50 text-gray-800">
+<body class="font-sans text-dark">
     <!-- Navigation -->
-    <nav class="glass-effect fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-xl font-bold gradient-text bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">ZESSS</span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#home" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
-                        <a href="#services" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300">Services</a>
-                        <a href="#portfolio" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300">Portfolio</a>
-                        <a href="#about" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300">About</a>
-                        <a href="#contact" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
-                    </div>
-                </div>
-                <div class="md:hidden">
-                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none transition duration-300">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
+    <nav class="bg-dark text-light py-4 px-6 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-serif gold-emboss">CLEMENTIA</span>
+                <span class="music-note"><i class="fas fa-music"></i></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-secondary transition duration-300">Home</a>
+                <a href="#about" class="hover:text-secondary transition duration-300">About</a>
+                <a href="#music" class="hover:text-secondary transition duration-300">Music</a>
+                <a href="#performances" class="hover:text-secondary transition duration-300">Performances</a>
+                <a href="#contact" class="hover:text-secondary transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-light hover:text-secondary transition duration-300">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
         </div>
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="md:hidden hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white rounded-lg mt-2 shadow-lg">
-                <a href="#home" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="#services" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Services</a>
-                <a href="#portfolio" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
-                <a href="#about" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About</a>
-                <a href="#contact" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-dark py-4 px-6 rounded-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-secondary transition duration-300">Home</a>
+                <a href="#about" class="hover:text-secondary transition duration-300">About</a>
+                <a href="#music" class="hover:text-secondary transition duration-300">Music</a>
+                <a href="#performances" class="hover:text-secondary transition duration-300">Performances</a>
+                <a href="#contact" class="hover:text-secondary transition duration-300">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-16 px-4 md:px-8 gradient-bg text-white">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <div class="typewriter mb-6">
-                    <h1 class="text-4xl md:text-5xl font-bold">Innovative Digital Solutions</h1>
-                </div>
-                <p class="text-xl mb-8 opacity-90">Kami menghadirkan pengalaman digital yang futuristik dan elegan untuk bisnis Anda</p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#contact" class="bg-white text-primary font-medium py-3 px-6 rounded-lg hover:bg-opacity-90 transition duration-300 shadow-lg">Get Started</a>
-                    <a href="#portfolio" class="border-2 border-white text-white font-medium py-3 px-6 rounded-lg hover:bg-white hover:bg-opacity-10 transition duration-300">View Portfolio</a>
-                </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="relative w-80 h-80 md:w-96 md:h-96">
-                    <div class="absolute inset-0 bg-white bg-opacity-10 rounded-full animate-pulse"></div>
-                    <div class="absolute inset-5 bg-white bg-opacity-10 rounded-full animate-pulse delay-75"></div>
-                    <div class="absolute inset-10 bg-white bg-opacity-10 rounded-full animate-pulse delay-150"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <img src="https://placehold.co/300x300/6366f1/FFFFFF?text=Z" alt="Zesss Logo" class="w-40 h-40 rounded-full object-cover shadow-2xl">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 px-4 md:px-8 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Our Services</h2>
-            <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">Kami menawarkan berbagai layanan digital inovatif untuk membantu bisnis Anda tumbuh di era digital</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-effect rounded-xl p-6 card-hover">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-laptop-code text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
-                    <p class="text-gray-600">Website modern dan responsif dengan teknologi terkini untuk pengalaman pengguna terbaik.</p>
-                </div>
-                
-                <div class="glass-effect rounded-xl p-6 card-hover">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">App Development</h3>
-                    <p class="text-gray-600">Aplikasi mobile inovatif untuk iOS dan Android dengan desain yang intuitif dan fungsional.</p>
-                </div>
-                
-                <div class="glass-effect rounded-xl p-6 card-hover">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-paint-brush text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
-                    <p class="text-gray-600">Desain antarmuka yang elegan dan pengalaman pengguna yang memikat untuk produk digital Anda.</p>
-                </div>
-                
-                <div class="glass-effect rounded-xl p-6 card-hover">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-chart-line text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Digital Marketing</h3>
-                    <p class="text-gray-600">Strategi pemasaran digital yang efektif untuk meningkatkan visibilitas dan pertumbuhan bisnis.</p>
-                </div>
-                
-                <div class="glass-effect rounded-xl p-6 card-hover">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-cloud text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Cloud Solutions</h3>
-                    <p class="text-gray-600">Layanan cloud yang skalabel dan aman untuk mendukung infrastruktur digital bisnis Anda.</p>
-                </div>
-                
-                <div class="glass-effect rounded-xl p-6 card-hover">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-robot text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">AI Integration</h3>
-                    <p class="text-gray-600">Integrasi kecerdasan buatan untuk mengotomatisasi proses dan meningkatkan efisiensi bisnis.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-16 px-4 md:px-8 bg-gray-50">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Our Portfolio</h2>
-            <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">Jelajahi proyek-proyek terbaru kami yang menunjukkan keahlian dan inovasi dalam dunia digital</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="rounded-xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-48 bg-gradient-to-r from-blue-400 to-purple-500"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
-                        <p class="text-gray-600">Platform e-commerce dengan fitur lengkap dan desain modern.</p>
-                    </div>
-                </div>
-                
-                <div class="rounded-xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-48 bg-gradient-to-r from-green-400 to-blue-500"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Health & Fitness App</h3>
-                        <p class="text-gray-600">Aplikasi mobile untuk tracking kesehatan dan kebugaran.</p>
-                    </div>
-                </div>
-                
-                <div class="rounded-xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-48 bg-gradient-to-r from-red-400 to-pink-500"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Finance Dashboard</h3>
-                        <p class="text-gray-600">Dashboard keuangan dengan visualisasi data yang interaktif.</p>
-                    </div>
+    <section id="home" class="relative py-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="vintage-border inline-block p-2 mb-8">
+                <div class="vintage-border p-6">
+                    <h1 class="text-4xl md:text-5xl font-serif text-primary mb-4">Elena<span class="music-note"><i class="fas fa-music"></i></span>Clementia</h1>
+                    <p class="text-xl text-dark font-medium">Classical Pianist & Composer</p>
                 </div>
             </div>
             
-            <div class="text-center mt-12">
-                <a href="#" class="inline-block gradient-bg text-white font-medium py-3 px-8 rounded-lg hover:opacity-90 transition duration-300 shadow-lg">View More Projects</a>
+            <div class="ornamental-divider text-xl my-12">
+                <span class="music-note"><i class="fas fa-music"></i></span>
+                <span class="mx-2">Where Emotion Meets Melody</span>
+                <span class="music-note"><i class="fas fa-music"></i></span>
+            </div>
+            
+            <div class="mt-12 flex justify-center">
+                <div class="record"></div>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="parchment rounded-lg">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-compact-disc text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="font-serif text-xl text-center text-primary mb-4">Discography</h3>
+                    <p class="text-center">5 studio albums featuring classical masterpieces and original compositions</p>
+                </div>
+                
+                <div class="parchment rounded-lg">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-glass-cheers text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="font-serif text-xl text-center text-primary mb-4">Live Performances</h3>
+                    <p class="text-center">Solo performances at prestigious concert halls across Europe and Asia</p>
+                </div>
+                
+                <div class="parchment rounded-lg">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-trophy text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="font-serif text-xl text-center text-primary mb-4">Awards</h3>
+                    <p class="text-center">Multiple international awards for musical excellence and interpretation</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 px-4 md:px-8 bg-white">
+    <section id="about" class="py-16 px-6 bg-dark text-light">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">About Us</h2>
-            <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">Mengenal lebih dekat tim di balik Zesss dan nilai-nilai yang kami anut</p>
+            <h2 class="text-3xl md:text-4xl font-serif text-center gold-emboss mb-12">About the Artist</h2>
             
             <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <img src="https://placehold.co/500x400/6366f1/FFFFFF?text=Team" alt="Zesss Team" class="rounded-xl shadow-xl">
+                <div class="md:w-2/5 mb-10 md:mb-0">
+                    <div class="vintage-border p-2">
+                        <div class="vintage-border overflow-hidden">
+                            <img src="./src/img/well-1.jpg" alt="Elena Clementia" class="w-full h-auto transform hover:scale-105 transition duration-700">
+                        </div>
+                    </div>
                 </div>
                 <div class="md:w-1/2 md:pl-12">
-                    <h3 class="text-2xl font-semibold mb-4">Innovation Driven by Passion</h3>
-                    <p class="text-gray-600 mb-4">Zesss didirikan dengan visi untuk menghadirkan solusi digital inovatif yang membantu bisnis tumbuh di era digital. Kami percaya bahwa teknologi yang tepat dapat mengubah cara bisnis beroperasi dan berinteraksi dengan pelanggan.</p>
-                    <p class="text-gray-600 mb-6">Tim kami terdiri dari para profesional berpengalaman di bidang pengembangan web, desain UI/UX, pengembangan aplikasi mobile, dan digital marketing yang siap membantu mewujudkan ide-ide Anda menjadi kenyataan.</p>
+                    <h3 class="text-2xl font-serif gold-emboss mb-6">A Life Dedicated to Music</h3>
+                    <p class="mb-6">Elena Clementia began her musical journey at the age of 5, showing exceptional talent and passion for the piano. Trained at the prestigious Vienna Conservatory of Music, she has developed a distinctive style that blends technical precision with deep emotional expression.</p>
                     
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-3">
-                                <i class="fas fa-check text-white"></i>
-                            </div>
-                            <span class="font-medium">Professional Team</span>
+                    <p class="mb-8">Her performances are celebrated for their unique interpretation of classical pieces while staying true to the composer's original vision. Elena has been described by critics as "a musician who speaks through her fingers, translating emotion into melody."</p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl gold-emboss font-serif mb-2">20+</div>
+                            <div class="text-sm">Years Experience</div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-3">
-                                <i class="fas fa-check text-white"></i>
-                            </div>
-                            <span class="font-medium">Modern Solutions</span>
+                        <div class="text-center">
+                            <div class="text-3xl gold-emboss font-serif mb-2">150+</div>
+                            <div class="text-sm">Performances</div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-3">
-                                <i class="fas fa-check text-white"></i>
-                            </div>
-                            <span class="font-medium">Timely Delivery</span>
+                        <div class="text-center">
+                            <div class="text-3xl gold-emboss font-serif mb-2">5</div>
+                            <div class="text-sm">Albums</div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-3">
-                                <i class="fas fa-check text-white"></i>
-                            </div>
-                            <span class="font-medium">Support 24/7</span>
+                        <div class="text-center">
+                            <div class="text-3xl gold-emboss font-serif mb-2">12</div>
+                            <div class="text-sm">Awards</div>
                         </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="#" class="inline-block border-2 border-secondary text-secondary hover:bg-secondary hover:text-dark font-medium py-2 px-6 rounded transition duration-300">Full Biography</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-4 md:px-8 gradient-bg text-white">
+    <!-- Music Section -->
+    <section id="music" class="py-16 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Get In Touch</h2>
-            <p class="text-center max-w-3xl mx-auto mb-12 opacity-90">Siap untuk memulai proyek Anda? Hubungi kami sekarang dan mari kita diskusikan ide-ide brilian Anda</p>
+            <h2 class="text-3xl md:text-4xl font-serif text-center text-primary mb-4">Discography</h2>
+            <p class="text-center text-dark mb-12 max-w-3xl mx-auto">A collection of recorded works that showcase the artistic evolution of Elena Clementia through the years</p>
             
-            <div class="flex flex-col md:flex-row justify-between">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <form class="glass-effect rounded-xl p-6">
-                        <div class="mb-4">
-                            <label for="name" class="block mb-2">Nama Lengkap</label>
-                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="parchment rounded-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://placehold.co/400x300/F8F0E3/8B4513?text=Nocturnes+2020')"></div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl text-primary mb-2">Nocturnes (2020)</h3>
+                        <div class="music-bar"></div>
+                        <p class="text-dark mb-4">A collection of Chopin's most beloved nocturnes, recorded at the legendary Concertgebouw in Amsterdam.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary"><i class="fas fa-compact-disc mr-2"></i>CD & Vinyl</span>
+                            <a href="#" class="text-secondary hover:text-primary transition duration-300">
+                                <i class="fas fa-play-circle text-xl"></i>
+                            </a>
                         </div>
-                        <div class="mb-4">
-                            <label for="email" class="block mb-2">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
-                        </div>
-                        <div class="mb-4">
-                            <label for="message" class="block mb-2">Pesan</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-white text-primary font-medium py-3 px-6 rounded-lg hover:bg-opacity-90 transition duration-300 shadow-lg">Kirim Pesan</button>
-                    </form>
+                    </div>
                 </div>
-                <div class="md:w-2/5">
-                    <div class="glass-effect rounded-xl p-6 mb-6">
-                        <div class="flex items-start mb-4">
-                            <div class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center mr-4">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-lg">Lokasi</h3>
-                                <p class="opacity-90">Jakarta, Indonesia</p>
-                            </div>
+                
+                <div class="parchment rounded-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://placehold.co/400x300/F8F0E3/8B4513?text=Reflections+2018')"></div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl text-primary mb-2">Reflections (2018)</h3>
+                        <div class="music-bar"></div>
+                        <p class="text-dark mb-4">Original compositions inspired by the works of Debussy and Ravel, exploring impressionistic musical landscapes.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary"><i class="fas fa-compact-disc mr-2"></i>CD & Digital</span>
+                            <a href="#" class="text-secondary hover:text-primary transition duration-300">
+                                <i class="fas fa-play-circle text-xl"></i>
+                            </a>
                         </div>
                     </div>
-                    
-                    <div class="glass-effect rounded-xl p-6 mb-6">
-                        <div class="flex items-start mb-4">
-                            <div class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center mr-4">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-lg">Email</h3>
-                                <p class="opacity-90">info@zesss.com</p>
-                            </div>
+                </div>
+                
+                <div class="parchment rounded-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://placehold.co/400x300/F8F0E3/8B4513?text=Beethoven+2016')"></div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl text-primary mb-2">Beethoven Sonatas (2016)</h3>
+                        <div class="music-bar"></div>
+                        <p class="text-dark mb-4">A critically acclaimed interpretation of Beethoven's most challenging piano sonatas.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary"><i class="fas fa-compact-disc mr-2"></i>Vinyl & Digital</span>
+                            <a href="#" class="text-secondary hover:text-primary transition duration-300">
+                                <i class="fas fa-play-circle text-xl"></i>
+                            </a>
                         </div>
                     </div>
-                    
-                    <div class="glass-effect rounded-xl p-6">
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center mr-4">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-lg">Telepon</h3>
-                                <p class="opacity-90">+62 21 1234 5678</p>
-                            </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-light font-medium py-2 px-6 rounded transition duration-300">View All Discography</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performances Section -->
+    <section id="performances" class="py-16 px-6 bg-dark text-light">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-serif text-center gold-emboss mb-4">Upcoming Performances</h2>
+            <p class="text-center text-light mb-12 max-w-3xl mx-auto">Experience the magic of live classical music with Elena Clementia</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-6 border border-secondary rounded-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-serif text-xl gold-emboss">Vienna Concert Hall</h3>
+                        <span class="text-secondary">Dec 15, 2023</span>
+                    </div>
+                    <p class="mb-4">An evening of Beethoven and Schubert, featuring the Moonlight Sonata and Impromptus.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-secondary"><i class="fas fa-map-marker-alt mr-2"></i>Vienna, Austria</span>
+                        <a href="#" class="text-secondary hover:text-light transition duration-300">Book Tickets <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <div class="p-6 border border-secondary rounded-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-serif text-xl gold-emboss">Royal Albert Hall</h3>
+                        <span class="text-secondary">Jan 22, 2024</span>
+                    </div>
+                    <p class="mb-4">A special performance of Chopin's complete Nocturnes in the iconic London venue.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-secondary"><i class="fas fa-map-marker-alt mr-2"></i>London, UK</span>
+                        <a href="#" class="text-secondary hover:text-light transition duration-300">Book Tickets <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <div class="p-6 border border-secondary rounded-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-serif text-xl gold-emboss">Carnegie Hall</h3>
+                        <span class="text-secondary">Mar 5, 2024</span>
+                    </div>
+                    <p class="mb-4">New York debut featuring a program of classical favorites and original compositions.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-secondary"><i class="fas fa-map-marker-alt mr-2"></i>New York, USA</span>
+                        <a href="#" class="text-secondary hover:text-light transition duration-300">Book Tickets <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <div class="p-6 border border-secondary rounded-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-serif text-xl gold-emboss">Tokyo Opera City</h3>
+                        <span class="text-secondary">May 18, 2024</span>
+                    </div>
+                    <p class="mb-4">An exclusive performance of Japanese-inspired classical works and traditional pieces.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-secondary"><i class="fas fa-map-marker-alt mr-2"></i>Tokyo, Japan</span>
+                        <a href="#" class="text-secondary hover:text-light transition duration-300">Book Tickets <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-secondary text-secondary hover:bg-secondary hover:text-dark font-medium py-2 px-6 rounded transition duration-300">View All Performances</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-serif text-center text-primary mb-4">Get In Touch</h2>
+            <p class="text-center text-dark mb-12 max-w-3xl mx-auto">For booking inquiries, collaborations, or general information, please contact us</p>
+            
+            <div class="parchment rounded-lg p-8">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-primary mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-primary rounded focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-primary mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-primary rounded focus:outline-none focus:ring-2 focus:ring-primary">
                         </div>
                     </div>
-                    
-                    <div class="flex mt-6 space-x-4 justify-center">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition duration-300">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition duration-300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-opacity-20 transition duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                    <div>
+                        <label for="subject" class="block text-primary mb-2">Subject</label>
+                        <input type="text" id="subject" class="w-full px-4 py-2 border border-primary rounded focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-primary mb-2">Message</label>
+                        <textarea id="message" rows="5" class="w-full px-4 py-2 border border-primary rounded focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-primary text-light hover:bg-opacity-90 font-medium py-2 px-8 rounded transition duration-300">Send Message</button>
+                    </div>
+                </form>
+                
+                <div class="mt-12 pt-8 border-t border-primary border-opacity-30">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div>
+                            <i class="fas fa-envelope text-2xl text-primary mb-2"></i>
+                            <h3 class="font-serif text-primary mb-1">Email</h3>
+                            <p class="text-dark">contact@elenaclementia.com</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone text-2xl text-primary mb-2"></i>
+                            <h3 class="font-serif text-primary mb-1">Phone</h3>
+                            <p class="text-dark">+1 (555) 123-4567</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-map-marker-alt text-2xl text-primary mb-2"></i>
+                            <h3 class="font-serif text-primary mb-1">Studio</h3>
+                            <p class="text-dark">123 Music Avenue, Vienna, Austria</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -350,53 +468,39 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-12 px-4 md:px-8">
+    <footer class="bg-dark text-light py-12 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4 gradient-text bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">ZESSS</h3>
-                    <p class="text-gray-400">Menyediakan solusi digital inovatif untuk bisnis masa depan.</p>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start">
+                        <span class="text-2xl font-serif gold-emboss">CLEMENTIA</span>
+                        <span class="music-note"><i class="fas fa-music"></i></span>
+                    </div>
+                    <p class="mt-2 text-light text-opacity-70">Classical Pianist & Composer</p>
                 </div>
                 
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Tautan Cepat</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
-                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
-                    </ul>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-light text-opacity-70 hover:text-secondary transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-light text-opacity-70 hover:text-secondary transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-light text-opacity-70 hover:text-secondary transition duration-300">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="text-light text-opacity-70 hover:text-secondary transition duration-300">
+                        <i class="fab fa-spotify"></i>
+                    </a>
                 </div>
                 
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Layanan</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Web Development</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">App Development</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">UI/UX Design</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Digital Marketing</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Berlangganan</h4>
-                    <p class="text-gray-400 mb-4">Berlangganan newsletter kami untuk update terbaru</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Email Anda" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
-                        <button type="submit" class="gradient-bg text-white px-4 py-2 rounded-r-lg hover:opacity-90 transition duration-300">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
+                <div class="text-center md:text-right">
+                    <p class="text-light text-opacity-70">© 2023 Elena Clementia. All rights reserved.</p>
                 </div>
             </div>
             
-            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">© 2023 Zesss. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
-                </div>
+            <div class="mt-8 pt-8 border-t border-light border-opacity-20 text-center text-light text-opacity-50 text-sm">
+                <p>Designed with <i class="fas fa-heart text-red-500"></i> for music lovers everywhere</p>
             </div>
         </div>
     </footer>
@@ -429,14 +533,16 @@
             });
         });
 
-        // Add shadow to navbar on scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 10) {
-                nav.classList.add('shadow-lg');
-            } else {
-                nav.classList.remove('shadow-lg');
-            }
+        // Record rotation control
+        const records = document.querySelectorAll('.record');
+        records.forEach(record => {
+            record.addEventListener('click', function() {
+                if (this.style.animationPlayState === 'paused') {
+                    this.style.animationPlayState = 'running';
+                } else {
+                    this.style.animationPlayState = 'paused';
+                }
+            });
         });
     </script>
 </body>
