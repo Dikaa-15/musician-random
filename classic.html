@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical Musician | Elegant Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        secondary: '#D4AF37',
+                        dark: '#2C1810',
+                        light: '#F8F0E3',
+                        accent: '#8B0000'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Crimson Text', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F8F0E3;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .vintage-border {
+            border: 8px solid #8B4513;
+            border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='100' height='100' fill='none' stroke='%238B4513' stroke-width='8' stroke-dasharray='10,6'/%3E%3C/svg%3E") 8 round;
+        }
+        
+        .ornamental-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #8B4513;
+            margin: 2rem 0;
+        }
+        
+        .ornamental-divider::before,
+        .ornamental-divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #8B4513;
+        }
+        
+        .ornamental-divider::before {
+            margin-right: 1rem;
+        }
+        
+        .ornamental-divider::after {
+            margin-left: 1rem;
+        }
+        
+        .music-note {
+            display: inline-block;
+            margin: 0 0.5rem;
+            color: #D4AF37;
+        }
+        
+        .parchment {
+            background-color: #F8F0E3;
+            background-image: linear-gradient(rgba(244, 240, 225, 0.7) 0.1em, transparent 0.1em), linear-gradient(90deg, rgba(244, 240, 225, 0.7) 0.1em, transparent 0.1em);
+            background-size: 3em 3em;
+            box-shadow: 0 0 10px rgba(139, 69, 19, 0.2);
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .parchment::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(139, 69, 19, 0.1) 0%, transparent 75%);
+            pointer-events: none;
+        }
+        
+        .gold-emboss {
+            color: #D4AF37;
+            text-shadow: 1px 1px 0px #8B4513, 
+                         -1px -1px 0px #8B4513, 
+                         2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .record {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #2C1810 10%, #000 60%);
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: rotate 20s linear infinite;
+            transition: animation-play-state 0.3s ease;
+        }
+        
+        .record:hover {
+            animation-play-state: paused;
+        }
+        
+        .record::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #D4AF37;
+            box-shadow: 0 0 10px #D4AF37;
+            z-index: 2;
+        }
+        
+        .record::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #F8F0E3;
+            z-index: 3;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .music-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #8B4513, #D4AF37, #8B4513);
+            margin: 10px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .music-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            animation: shine 2s infinite;
+        }
+        
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body class="font-sans text-dark">
+    <!-- Navigation -->
+    <nav class="bg-dark text-light py-4 px-6 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-serif gold-emboss">CLEMENTIA</span>
+                <span class="music-note"><i class="fas fa-music"></i></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-secondary transition duration-300">Home</a>
+                <a href="#about" class="hover:text-secondary transition duration-300">About</a>
+                <a href="#music" class="hover:text-secondary transition duration-300">Music</a>
+                <a href="#performances" class="hover:text-secondary transition duration-300">Performances</a>
+                <a href="#contact" class="hover:text-secondary transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-light hover:text-secondary transition duration-300">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-dark py-4 px-6 rounded-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-secondary transition duration-300">Home</a>
+                <a href="#about" class="hover:text-secondary transition duration-300">About</a>
+                <a href="#music" class="hover:text-secondary transition duration-300">Music</a>
+                <a href="#performances" class="hover:text-secondary transition duration-300">Performances</a>
+                <a href="#contact" class="hover:text-secondary transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative py-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="vintage-border inline-block p-2 mb-8">
+                <div class="vintage-border p-6">
+                    <h1 class="text-4xl md:text-5xl font-serif text-primary mb-4">Elena<span class="music-note"><i class="fas fa-music"></i></span>Clementia</h1>
+                    <p class="text-xl text-dark font-medium">Classical Pianist & Composer</p>
+                </div>
+            </div>
+            
+            <div class="ornamental-divider text-xl my-12">
+                <span class="music-note"><i class="fas fa-music"></i></span>
+                <span class="mx-2">Where Emotion Meets Melody</span>
+                <span class="music-note"><i class="fas fa-music"></i></span>
+            </div>
+            
+            <div class="mt-12 flex justify-center">
+                <div class="record"></div>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="parchment rounded-lg">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-compact-disc text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="font-serif text-xl text-center text-primary mb-4">Discography</h3>
+                    <p class="text-center">5 studio albums featuring classical masterpieces and original compositions</p>
+                </div>
+                
+                <div class="parchment rounded-lg">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-glass-cheers text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="font-serif text-xl text-center text-primary mb-4">Live Performances</h3>
+                    <p class="text-center">Solo performances at prestigious concert halls across Europe and Asia</p>
+                </div>
+                
+                <div class="parchment rounded-lg">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-trophy text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="font-serif text-xl text-center text-primary mb-4">Awards</h3>
+                    <p class="text-center">Multiple international awards for musical excellence and interpretation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 bg-dark text-light">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-serif text-center gold-emboss mb-12">About the Artist</h2>
+            
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-2/5 mb-10 md:mb-0">
+                    <div class="vintage-border p-2">
+                        <div class="vintage-border overflow-hidden">
+                            <img src="./src/img/well-1.jpg" alt="Elena Clementia" class="w-full h-auto transform hover:scale-105 transition duration-700">
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="text-2xl font-serif gold-emboss mb-6">A Life Dedicated to Music</h3>
+                    <p class="mb-6">Elena Clementia began her musical journey at the age of 5, showing exceptional talent and passion for the piano. Trained at the prestigious Vienna Conservatory of Music, she has developed a distinctive style that blends technical precision with deep emotional expression.</p>
+                    
+                    <p class="mb-8">Her performances are celebrated for their unique interpretation of classical pieces while staying true to the composer's original vision. Elena has been described by critics as "a musician who speaks through her fingers, translating emotion into melody."</p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl gold-emboss font-serif mb-2">20+</div>
+                            <div class="text-sm">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl gold-emboss font-serif mb-2">150+</div>
+                            <div class="text-sm">Performances</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl gold-emboss font-serif mb-2">5</div>
+                            <div class="text-sm">Albums</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl gold-emboss font-serif mb-2">12</div>
+                            <div class="text-sm">Awards</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="#" class="inline-block border-2 border-secondary text-secondary hover:bg-secondary hover:text-dark font-medium py-2 px-6 rounded transition duration-300">Full Biography</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-serif text-center text-primary mb-4">Discography</h2>
+            <p class="text-center text-dark mb-12 max-w-3xl mx-auto">A collection of recorded works that showcase the artistic evolution of Elena Clementia through the years</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="parchment rounded-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://placehold.co/400x300/F8F0E3/8B4513?text=Nocturnes+2020')"></div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl text-primary mb-2">Nocturnes (2020)</h3>
+                        <div class="music-bar"></div>
+                        <p class="text-dark mb-4">A collection of Chopin's most beloved nocturnes, recorded at the legendary Concertgebouw in Amsterdam.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary"><i class="fas fa-compact-disc mr-2"></i>CD & Vinyl</span>
+                            <a href="#" class="text-secondary hover:text-primary transition duration-300">
+                                <i class="fas fa-play-circle text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="parchment rounded-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://placehold.co/400x300/F8F0E3/8B4513?text=Reflections+2018')"></div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl text-primary mb-2">Reflections (2018)</h3>
+                        <div class="music-bar"></div>
+                        <p class="text-dark mb-4">Original compositions inspired by the works of Debussy and Ravel, exploring impressionistic musical landscapes.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary"><i class="fas fa-compact-disc mr-2"></i>CD & Digital</span>
+                            <a href="#" class="text-secondary hover:text-primary transition duration-300">
+                                <i class="fas fa-play-circle text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="parchment rounded-lg overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://placehold.co/400x300/F8F0E3/8B4513?text=Beethoven+2016')"></div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl text-primary mb-2">Beethoven Sonatas (2016)</h3>
+                        <div class="music-bar"></div>
+                        <p class="text-dark mb-4">A critically acclaimed interpretation of Beethoven's most challenging piano sonatas.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary"><i class="fas fa-compact-disc mr-2"></i>Vinyl & Digital</span>
+                            <a href="#" class="text-secondary hover:text-primary transition duration-300">
+                                <i class="fas fa-play-circle text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-light font-medium py-2 px-6 rounded transition duration-300">View All Discography</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performances Section -->
+    <section id="performances" class="py-16 px-6 bg-dark text-light">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-serif text-center gold-emboss mb-4">Upcoming Performances</h2>
+            <p class="text-center text-light mb-12 max-w-3xl mx-auto">Experience the magic of live classical music with Elena Clementia</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-6 border border-secondary rounded-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-serif text-xl gold-emboss">Vienna Concert Hall</h3>
+                        <span class="text-secondary">Dec 15, 2023</span>
+                    </div>
+                    <p class="mb-4">An evening of Beethoven and Schubert, featuring the Moonlight Sonata and Impromptus.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-secondary"><i class="fas fa-map-marker-alt mr-2"></i>Vienna, Austria</span>
+                        <a href="#" class="text-secondary hover:text-light transition duration-300">Book Tickets <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <div class="p-6 border border-secondary rounded-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-serif text-xl gold-emboss">Royal Albert Hall</h3>
+                        <span class="text-secondary">Jan 22, 2024</span>
+                    </div>
+                    <p class="mb-4">A special performance of Chopin's complete Nocturnes in the iconic London venue.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-secondary"><i class="fas fa-map-marker-alt mr-2"></i>London, UK</span>
+                        <a href="#" class="text-secondary hover:text-light transition duration-300">Book Tickets <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <div class="p-6 border border-secondary rounded-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-serif text-xl gold-emboss">Carnegie Hall</h3>
+                        <span class="text-secondary">Mar 5, 2024</span>
+                    </div>
+                    <p class="mb-4">New York debut featuring a program of classical favorites and original compositions.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-secondary"><i class="fas fa-map-marker-alt mr-2"></i>New York, USA</span>
+                        <a href="#" class="text-secondary hover:text-light transition duration-300">Book Tickets <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <div class="p-6 border border-secondary rounded-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="font-serif text-xl gold-emboss">Tokyo Opera City</h3>
+                        <span class="text-secondary">May 18, 2024</span>
+                    </div>
+                    <p class="mb-4">An exclusive performance of Japanese-inspired classical works and traditional pieces.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-secondary"><i class="fas fa-map-marker-alt mr-2"></i>Tokyo, Japan</span>
+                        <a href="#" class="text-secondary hover:text-light transition duration-300">Book Tickets <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-secondary text-secondary hover:bg-secondary hover:text-dark font-medium py-2 px-6 rounded transition duration-300">View All Performances</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-serif text-center text-primary mb-4">Get In Touch</h2>
+            <p class="text-center text-dark mb-12 max-w-3xl mx-auto">For booking inquiries, collaborations, or general information, please contact us</p>
+            
+            <div class="parchment rounded-lg p-8">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-primary mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-primary rounded focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-primary mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-primary rounded focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-primary mb-2">Subject</label>
+                        <input type="text" id="subject" class="w-full px-4 py-2 border border-primary rounded focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-primary mb-2">Message</label>
+                        <textarea id="message" rows="5" class="w-full px-4 py-2 border border-primary rounded focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-primary text-light hover:bg-opacity-90 font-medium py-2 px-8 rounded transition duration-300">Send Message</button>
+                    </div>
+                </form>
+                
+                <div class="mt-12 pt-8 border-t border-primary border-opacity-30">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div>
+                            <i class="fas fa-envelope text-2xl text-primary mb-2"></i>
+                            <h3 class="font-serif text-primary mb-1">Email</h3>
+                            <p class="text-dark">contact@elenaclementia.com</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone text-2xl text-primary mb-2"></i>
+                            <h3 class="font-serif text-primary mb-1">Phone</h3>
+                            <p class="text-dark">+1 (555) 123-4567</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-map-marker-alt text-2xl text-primary mb-2"></i>
+                            <h3 class="font-serif text-primary mb-1">Studio</h3>
+                            <p class="text-dark">123 Music Avenue, Vienna, Austria</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start">
+                        <span class="text-2xl font-serif gold-emboss">CLEMENTIA</span>
+                        <span class="music-note"><i class="fas fa-music"></i></span>
+                    </div>
+                    <p class="mt-2 text-light text-opacity-70">Classical Pianist & Composer</p>
+                </div>
+                
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-light text-opacity-70 hover:text-secondary transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-light text-opacity-70 hover:text-secondary transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-light text-opacity-70 hover:text-secondary transition duration-300">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="text-light text-opacity-70 hover:text-secondary transition duration-300">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-light text-opacity-70">© 2023 Elena Clementia. All rights reserved.</p>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-light border-opacity-20 text-center text-light text-opacity-50 text-sm">
+                <p>Designed with <i class="fas fa-heart text-red-500"></i> for music lovers everywhere</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Record rotation control
+        const records = document.querySelectorAll('.record');
+        records.forEach(record => {
+            record.addEventListener('click', function() {
+                if (this.style.animationPlayState === 'paused') {
+                    this.style.animationPlayState = 'running';
+                } else {
+                    this.style.animationPlayState = 'paused';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

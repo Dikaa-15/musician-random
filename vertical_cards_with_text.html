@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Feature Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'oklch(39.8% 0.195 277.366)',
+                        secondary: '#8b5cf6',
+                        dark: '#1f2937',
+                        light: '#f9fafb'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, oklch(39.8% 0.195 277.366) 0%, #8b5cf6 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50%;
+            height: 4px;
+            background: oklch(39.8% 0.195 277.366);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Vertical Feature Cards Section -->
+    <section class="py-16 px-4 md:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 section-title mx-auto">Popular Events</h2>
+            <p class="text-gray-600 text-center max-w-3xl mx-auto mb-12">Here are some of the most popular events in New York City curated by professionals.</p>
+            
+            <div class="grid grid-cols-1 gap-12">
+                <!-- Card 1 -->
+                <div class="flex flex-col md:flex-row items-center justify-between bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-primary text-white text-sm font-medium py-1 px-3 rounded-full">Paid</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Loachella, NYC</h3>
+                        <p class="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium hover:text-secondary transition duration-300">
+                            See Event Details
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1501281667305-0d4e4bceb9c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Loachella Event" class="w-full h-64 md:h-96 object-cover">
+                    </div>
+                </div>
+                
+                <!-- Card 2 (Alternate) -->
+                <div class="flex flex-col md:flex-row-reverse items-center justify-between bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-green-500 text-white text-sm font-medium py-1 px-3 rounded-full">Free</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Central Park Summer Festival</h3>
+                        <p class="text-gray-600 mb-6">Enjoy live music performances from local artists in the heart of Central Park. Bring your picnic blanket and favorite snacks for a relaxing evening under the stars with friends and family.</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium hover:text-secondary transition duration-300">
+                            See Event Details
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1419640303358-44f0d27f48e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Central Park Event" class="w-full h-64 md:h-96 object-cover">
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="flex flex-col md:flex-row items-center justify-between bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-primary text-white text-sm font-medium py-1 px-3 rounded-full">Paid</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Broadway Night Gala</h3>
+                        <p class="text-gray-600 mb-6">Experience the magic of Broadway with this special gala event featuring performances from current hit shows. Includes cocktail reception and opportunity to meet the cast after the show.</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium hover:text-secondary transition duration-300">
+                            See Event Details
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Broadway Event" class="w-full h-64 md:h-96 object-cover">
+                    </div>
+                </div>
+                
+                <!-- Card 4 (Alternate) -->
+                <div class="flex flex-col md:flex-row-reverse items-center justify-between bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-green-500 text-white text-sm font-medium py-1 px-3 rounded-full">Free</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Brooklyn Food & Wine Festival</h3>
+                        <p class="text-gray-600 mb-6">Sample culinary delights from Brooklyn's top restaurants and enjoy wine tastings from local vineyards. Live cooking demonstrations and opportunities to meet renowned chefs.</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium hover:text-secondary transition duration-300">
+                            See Event Details
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Food Festival" class="w-full h-64 md:h-96 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple animation for cards when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card-hover');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
